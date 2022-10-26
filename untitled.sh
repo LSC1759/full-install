@@ -1,4 +1,4 @@
-pacman -Syy archlinux-keyring figlet &&
+pacman -Syy archlinux-keyring &&
 mkfs.fat -F 32 /dev/sda1 &&
 mkswap /dev/sda2 &&
 mkfs.ext4 /dev/sda3 &&
@@ -21,5 +21,4 @@ arch-chroot /mnt sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g
 arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
 arch-chroot /mnt systemctl enable NetworkManager &&
-umount -a &&
-figlet INSTALLATION COMPLETE
+umount -a
