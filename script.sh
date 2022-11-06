@@ -20,5 +20,6 @@ arch-chroot /mnt passwd arch &&
 arch-chroot /mnt sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers &&
 arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
+arch-chroot /mnt systemctl enable bluetooth &&
 arch-chroot /mnt systemctl enable NetworkManager &&
 umount -a
