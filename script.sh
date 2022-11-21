@@ -5,7 +5,7 @@ mkfs.ext4 /dev/sda3 &&
 mount /dev/sda3 /mnt &&
 swapon /dev/sda2 &&
 mount --mkdir /dev/sda1 /mnt/boot/efi &&
-pacstrap /mnt alacritty amd-ucode base base-devel bluez bluez-utils bspwm efibootmgr feh firefox git grub htop intel-ucode jre-openjdk linux linux-firmware linux-headers mtpfs mpv nano net-tools networkmanager obs-studio openssh papirus-icon-theme picom pipewire pipewire-alsa pipewire-jack pipewire-media-session pipewire-pulse polybar pulsemixer rofi sxhkd ttf-font-awesome unzip neovim wget xorg xorg-xinit &&
+pacstrap /mnt alacritty amd-ucode base base-devel bluez bluez-utils bspwm efibootmgr feh firefox git grub htop intel-ucode jre-openjdk linux linux-firmware linux-headers mtpfs mpv nano net-tools networkmanager ntfs-3g obs-studio openssh papirus-icon-theme picom pipewire pipewire-alsa pipewire-jack pipewire-media-session pipewire-pulse polybar pulsemixer rofi sxhkd ttf-font-awesome unzip neovim wget xorg xorg-xinit &&
 genfstab -U /mnt > /mnt/etc/fstab &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
 arch-chroot /mnt sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen &&
