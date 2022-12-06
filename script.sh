@@ -9,8 +9,8 @@ pacstrap /mnt alacritty base base-devel bluez bluez-utils bspwm efibootmgr feh f
 arch-chroot /mnt grub-install /dev/sda &&
 arch-chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg &&
 arch-chroot /mnt ln -sf /usr/share/zoneinfo/Asia/Tbilisi /etc/localtime &&
-arch-chroot /mnt locale-gen &&
 arch-chroot /mnt sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen &&
+arch-chroot /mnt locale-gen &&
 arch-chroot /mnt touch /etc/hostname &&
 arch-chroot /mnt echo archlinux > /etc/hostname &&
 arch-chroot /mnt touch /etc/locale.conf &&
