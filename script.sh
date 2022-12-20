@@ -21,5 +21,4 @@ arch-chroot /mnt passwd arch &&
 arch-chroot /mnt sed -i 's/# %wheel ALL=(ALL:ALL) ALL/%wheel ALL=(ALL:ALL) ALL/g' /etc/sudoers &&
 arch-chroot /mnt systemctl enable bluetooth &&
 arch-chroot /mnt systemctl enable NetworkManager &&
-genfstab -U /mnt > /mnt/etc/fstab &&
-umount -a
+genfstab -U /mnt > /mnt/etc/fstab
